@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--CSS-->
-  <title>Fioto Paez-Contacto</title>
+  <title>Fito Paez-Contacto</title>
 </head>
 <body>
-  <nav>
+  <nav id="barra-navegacion">
     <a href="../index.html">home</a>
     <!--Ruta Interna o relativa-->
     <a href="../paginas/biografia.html">biografia</a>
@@ -16,6 +16,67 @@
     <a href="./tickets.html">tickets</a>
     <a href="#">contacto</a>
   </nav>
+
+  <main>
+    <form action="procesar.php" method="post">
+      
+      <!--Input Nombre-->
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="juan">
+      </div>
+
+      <div>
+        <!--Input Apellido-->
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" placeholder="perez">
+      </div>
+      
+      <div>
+        <!--Input email-->
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" placeholder="hola@servidor.com">
+      </div>
+
+      <div>
+        <!--Input pass-->
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" required>
+      </div>
+
+      <!--Radio-->
+      <h3>Seleccione su género: </h3>
+
+      <label for="genero">Femenino</label>
+      <input type="radio" name="genero" value="femenino">
+
+      <label for="genero">Masculino</label>
+      <input type="radio" name="genero" value="masculino">
+
+      <label for="genero">Prefieron no decirlo</label>
+      <input type="radio" name="genero" value="no-decirlo">
+
+      <!--Checkbox-->
+      <h3>¿Que discos querés escuchar?</h3>
+      <label for="disco">El amor después del amor</label>
+      <input type="checkbox" name="disco" value="el-amor">
+
+      <label for="disco">Circo Beat</label>
+      <input type="checkbox" name="disco" value="circo-beat">
+
+      <label for="disco">Giros</label>
+      <input type="checkbox" name="disco" value="giros">
+
+      <!--Textaarea-->
+      <h3>Dejame tu mensaje</h3>
+      <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Borrar Formulario</button>
+
+    </form>
+  </main>
+
   
 </body>
 </html>

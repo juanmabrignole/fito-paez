@@ -1,0 +1,26 @@
+/*selector de tipo reset o universal*/
+*{
+  margin: 0;
+  padding: 0;
+}
+/*Selector de tipo ID*/
+#barra-navegacion{
+  /*Porpiedad*/
+  background-color: #379752dc;
+  color: #000;
+}
+
+/*selector de tipo clase*/
+.estilo-links{
+  font-size: 20px;
+  font-weight: bold;
+  color: #c95b24dc;
+  list-style-type: none;
+}
+
+/*selector de etiqueta*/
+img{
+  width: 50%;
+}
+
+
