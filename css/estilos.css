@@ -1,3 +1,12 @@
+/*Tipografías*/
+/*fuente local*/
+@font-face {
+  font-family: 'fuente-principal';
+  src: url('../assets/fuentes/Poppins-Regular.ttf');
+}
+/*fuente externa*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 /*selector de tipo reset o universal*/
 *{
   margin: 0;
@@ -21,6 +30,47 @@
 /*selector de etiqueta*/
 img{
   width: 50%;
+}
+
+/*tipografías*/
+/*local*/
+.font-main{
+  font-family: 'fuente-principal', sans-serif;
+}
+
+/*externa*/
+.encabezado-home{
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #212F3D;
+}
+
+/*Boxmodeling*/
+/* .bloque{
+  border: 1px solid #000;
+} */
+
+.elemento-bloque{
+  display: inline;
+  border: 5px solid #3e4b78dc;
+  width: 50%;
+  height: 250px;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.elemento-linea{
+  display: inline-block;
+  border: 5px solid #3d2c21;
+  /* width: 500px;
+  height: 500px; */
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
