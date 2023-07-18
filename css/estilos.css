@@ -329,11 +329,103 @@ button:hover::after {
   grid-area: main;
 }
 
+.item4{
+  background-color: #345407dc;
+  grid-area: aside;
+}
+
+.item5{
+  background-color: #ac1d81dc;
+  grid-area: footer;
+}
+
+.titulo-tickets{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  color: #212F3D;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*navbar con flexbox*/
+
+.icon-fito{
+  width: 100px;
+  border-radius: 50%;
+}
+
+nav{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a{
+  font-family: 'fuente-principal', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
 
 
+/*Mediaqueries*/
+@media screen and (max-width: 480px){
+  
+  .contenedor-grid{
+    /*tipografia*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+  
+    /*box-modeling*/
+    width: 90%;
+    height: 600px;
+    margin: 40px auto;
+    border: 5px groove #000;
+  
+    /*activamos grid*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    gap: 10px;
+  
+    /*grid areas*/
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside"
+    "nav"
+    "footer"
+    ;
+  
+  }
 
+}
 
+@media screen and (min-width: 481px) and (max-width: 960px){
+  .titulo-tickets{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    color: #911973;
+    font-weight:lighter;
+    border: 2px groove #000;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
 
+  /*Modificar la disposición de nuestro grid areas para este breakpoint*/
 
+}
 
-
+@media screen and (min-width: 961px) and (max-width: 1328px){
+  .titulo-tickets{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    color: #5f3c30;
+    font-weight:bolder;
+    border: 3px dotted #000;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
