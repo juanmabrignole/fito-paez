@@ -77,7 +77,7 @@ img{
   padding-right: 20px;
 }
 
-button {
+/* button {
   position: relative;
   margin: 0;
   padding: 0.8em 1em;
@@ -159,7 +159,7 @@ button:hover::before {
 
 button:hover::after {
   transform: translate(50%, 0) scale(1.1);
-}
+} */
 
 /*Flexbox teoría*/
 /*contenedor padre*/
@@ -354,7 +354,7 @@ button:hover::after {
   border-radius: 50%;
 }
 
-nav{
+nav {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -366,7 +366,186 @@ a{
   font-family: 'fuente-principal', sans-serif;
   font-weight: 600;
   text-decoration: none;
+  font-size: 18px;
+  color: #000;
 }
+
+/*pseudoclases*/
+a:hover{
+  font-size: 19px;
+  color: #00cdf1;
+  border-bottom: 3px solid #000;
+}
+
+a:active{
+  background-color: #ccc;
+  color: #000;
+  padding: 10px;
+}
+
+a:link{
+  color: #b0b01f;
+}
+
+a:visited{
+  color: #911973;
+}
+
+/*:nth-child(N) & nth-last-child*/
+.grupo{
+  width: 500px;
+  margin: 20px auto;
+  background-color: #ccc;
+}
+
+/* .lista :nth-child(7){
+  background-color: #00cdf1;
+  color: #212F3D;
+  font-size: 20px;
+} */
+
+/*posiciones impares*/
+/* .lista :nth-last-child(even){
+  background-color: #00cdf1;
+  color: #212F3D;
+  font-size: 20px;
+} */
+
+.lista :nth-child(odd){
+  background-color: #00cdf1;
+  color: #212F3D;
+  font-size: 20px;
+}
+
+/* posiciones pares*/ 
+/* /* .lista :nth-child(even){
+  background-color: #00cdf1;
+  color: #212F3D;
+  font-size: 20px;
+} */
+
+/*First and last of type*/
+
+.elementos p:first-of-type{
+  background-color: #212F3D;
+  text-transform: uppercase;
+  color: #084550;
+}
+
+.elementos p:last-of-type{
+  background-color: #311102;
+  text-transform: lowercase;
+  color:#fff
+}
+
+.elementos div:first-of-type{
+  background-color: #9f9008;
+  text-transform: capitalize;
+  color: #222120;
+}
+
+/*tarea para el hogar, impactar al ultimo de los divs*/
+
+/*First and last child*/
+.parrafos p:first-child{
+  background-color: #ba2a0e;
+  color: white;
+}
+
+.parrafos p:last-child{
+  background-color: #495cc7;
+  color: rgb(16, 16, 16);
+}
+
+/*Metodología BEM*/
+.contenedor{
+  /* max-width: 500px;
+  width: 90%; */
+  margin: 20px 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/*Bloque 1*/
+.tarjeta{
+  width: 800px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.tarjeta__fecha{
+  background-color: rgb(240, 16, 16);
+  color: #fff;
+  font-weight: bolder;
+  padding: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*Elemento 1*/
+.tarjeta__imagen{
+  width: 60%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/*Elemento 2*/
+.tarjeta__textos{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000;
+} 
+
+/*Elemento 3*/
+.tarjeta__enlace{
+  color: #f10086;
+  padding: 10px auto;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'fuente-principal';
+}
+
+.tarjeta__parrafo{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Bloque 2*/
+.boton{
+  background: #000;
+  display: block;
+  width: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 100px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/*Modificador*/
+.boton--alternativo{
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0;
+}
+
+
+
 
 
 /*Mediaqueries*/
