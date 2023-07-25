@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--Favicon-->
   <link rel="shortcut icon" href="../assets/icons/teclado.png" type="image/x-icon">
+  <!--Boostrap download-->
+  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+  <!--Boostrap Vía CDN-->
+  <!--Bootstrap CSS-->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
   <!--CSS-->
   <link rel="stylesheet" href="../css/estilos.css">
   <title>Fito Paez-Biografia</title>
@@ -12,7 +17,7 @@
 <body>
 
   <!--Navbar con flexbox*/-->
-  <nav>
+  <!-- <nav>
 
     <img class="icon-fito" src="../assets/icons/fito-original.webp" alt="icon-fito">
 
@@ -26,9 +31,144 @@
 
     <a href="../paginas/contacto.html">Contacto</a>
 
+  </nav> -->
+
+  <!--Navbar BTS-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="icon-fito" src="../assets/icons/fito-original.webp" alt="fito-icono">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
   </nav>
 
+  <!--Cards BTS-->
+  <div class="container mt-3">
+    <div class="row g-3">
+      <!--tarjeta 1-->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/FitoPaezTercerm.jpg" alt="fito-tercer-mundo">
+                
+                <div class="card-body">
+                <h5>Tercer Mundo</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="https://open.spotify.com/album/1qrBKmoNZrXtBnonrHSYsx?si=_m3Pb8UzTgij_l2aD34APw" target="_blank">
+                <button class="btn btn-warning">Escuchar</button>
+                </a>
+                </div>
+            </div>
+        </div>
+        
+        <!--tarjeta 2-->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/giros.jpg" alt="fito-giros">
+                
+                <div class="card-body">
+                <h5>Giros</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="https://open.spotify.com/album/2bUpIi2WqqXxrLjwxqmURm?si=lav-GZ2lT0eIFZyCvaN0ew" target="_blank">
+                <button class="btn btn-warning">Escuchar</button>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        <!--tarjeta 3-->
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="card">
+                <img class="card-img-top" src="../assets/img/TAPA-FITO-BAJA.jpg" alt="fito-la-conquista">
+                <div class="card-body">
+                <h5>La Conquista del Espacio</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur. </p>
+                <a href="https://open.spotify.com/album/0hUTkPlrlHbLkrKB8JLTXQ?si=ASWalfeoR1qsMhS99Qk3ww" target="_blank">
+                <button class="btn btn-warning">Escuchar</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+  <!--Grillas BTS-->
+  <div class="container mt-3 mb-6">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-3 bg-danger p-2 d-flex justify-content-center">Columna 1</div>
+      <div class="col-12 col-md-4 col-lg-6 bg-primary p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates autem deleniti laboriosam deserunt! Laboriosam, tempora modi dolore totam quis maiores.</div>
+      <div class="col-12 col-md-4 col-lg-3 bg-success p-2">Columna 3</div>
+    </div>
+
+
+  </div>
+
+
+
+
+  <!-- <div class="container">
   
+  <p class="display-1">h1. Bootstrap heading</p>
+  <p class="h2">h2. Bootstrap heading</p>
+  <p class="h3">h3. Bootstrap heading</p>
+  <p class="h4">h4. Bootstrap heading</p>
+  <p class="h5">h5. Bootstrap heading</p>
+  <p class="h6">h6. Bootstrap heading</p>
+
+  <div class="p-3 mb-2 bg-success">.bg-secondary-subtle</div>
+
+
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+
+  </div> -->
+
   
+  <!--dropdown bts-->
+  <!-- <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div> -->
+
+  
+  <!-- BOOTSTRAP JS-->
+  <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
 </body>
 </html>

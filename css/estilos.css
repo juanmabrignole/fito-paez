@@ -371,7 +371,7 @@ a{
 }
 
 /*pseudoclases*/
-a:hover{
+/* a:hover{
   font-size: 19px;
   color: #00cdf1;
   border-bottom: 3px solid #000;
@@ -389,7 +389,7 @@ a:link{
 
 a:visited{
   color: #911973;
-}
+} */
 
 /*:nth-child(N) & nth-last-child*/
 .grupo{
