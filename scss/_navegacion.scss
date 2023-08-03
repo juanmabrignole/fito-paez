@@ -1,0 +1,23 @@
+@import "fuentes";
+
+/*nesting o anidamiento*/
+nav {
+  display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /*variable local*/
+  $color-nav: green;
+  ul{
+    list-style-type: none;
+    li{
+      font-size: $font-size;
+      color:blue;
+      &:hover{
+        color: red;
+      }
+      a{
+        text-decoration: none;
+        color: #ccc;
+      }
+    }
+  }
+}

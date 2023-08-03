@@ -1,84 +1,74 @@
-@charset "UTF-8";
-/*nesting o anidamiento*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-nav {
-  display: flex;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /*variable local*/
-}
-nav ul {
-  list-style-type: none;
-}
-nav ul li {
-  font-size: 20px;
-  color: blue;
-}
-nav ul li:hover {
-  color: red;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #ccc;
-}
+@import "colores";
+@import "navegacion";
+@import "fuentes";
+@import "footer";
 
 /*Variables globales*/
+$relleno: 20px;
+$fuente-principal: Arial, Helvetica, sans-serif;
+$color-primario: #F4D03F;
+$color-secundario: #F39C12;
+
 body {
-  background-color: #F4D03F;
+  background-color: $color-primario;
   /*operaciones matemáticas + - / * */
-  padding: 1200px;
+  padding: ($relleno + 100) * 10;
 }
+
+
 
 /*Tipografías*/
 /*fuente local*/
 @font-face {
-  font-family: "fuente-principal";
-  src: url("../assets/fuentes/Poppins-Regular.ttf");
+  font-family: 'fuente-principal';
+  src: url('../assets/fuentes/Poppins-Regular.ttf');
 }
 /*fuente externa*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 /*selector de tipo reset o universal*/
-* {
+*{
   margin: 0;
   padding: 0;
 }
-
 /*Selector de tipo ID*/
-#barra-navegacion {
+#barra-navegacion{
   /*Porpiedad*/
-  background-color: #F39C12;
+  background-color: $color-secundario;
   color: #000;
 }
 
-.hola {
+.hola{
   font-style: italic;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: $font-size;
+  font-family: $fuente-principal;
 }
 
 /*selector de tipo clase*/
-.estilo-links {
+.estilo-links{
   font-size: 20px;
   font-weight: bold;
-  color: #F39C12;
+  color: $color-secundario;
   list-style-type: none;
 }
 
 /*selector de etiqueta*/
-img {
+img{
   width: 50%;
 }
 
 /*tipografías*/
 /*local*/
-.font-main {
-  font-family: "fuente-principal", sans-serif;
+.font-main{
+  font-family: 'fuente-principal', sans-serif;
 }
 
 /*externa*/
-.encabezado-home {
+.encabezado-home{
   text-transform: capitalize;
   font-size: 30px;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #212F3D;
 }
 
@@ -86,9 +76,10 @@ img {
 /* .bloque{
   border: 1px solid #000;
 } */
-.elemento-bloque {
+
+.elemento-bloque{
   display: inline;
-  border: 5px solid rgba(62, 75, 120, 0.862745098);
+  border: 5px solid #3e4b78dc;
   width: 50%;
   height: 250px;
   padding-top: 20px;
@@ -96,7 +87,7 @@ img {
   margin-left: 30px;
 }
 
-.elemento-linea {
+.elemento-linea{
   display: inline-block;
   border: 5px solid #3d2c21;
   /* width: 500px;
@@ -190,9 +181,10 @@ button:hover::before {
 button:hover::after {
   transform: translate(50%, 0) scale(1.1);
 } */
+
 /*Flexbox teoría*/
 /*contenedor padre*/
-.flex-container {
+.flex-container{
   /*Activamos flex*/
   display: flex;
   /*definimos cual va  ser nuestro Main axis y cual, o si será fila o columna*/
@@ -204,6 +196,7 @@ button:hover::after {
   /*defino el desborde de los flex items*/
   flex-wrap: wrap;
   /* align-content: space-evenly; */
+
   /*Boxmodeling*/
   border: 5px solid #000;
   background-color: #ccc;
@@ -212,74 +205,84 @@ button:hover::after {
   height: 800px;
 }
 
-.caja {
+.caja{
   /*box modeling*/
   width: 200px;
   height: 200px;
   border: 1px solid #ccc;
   background-color: #7f4516;
   margin: 5px;
+
   /*tipografia*/
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   text-align: center;
 }
 
 /*propiedades de los flex items*/
-.c1 {
-  background-color: rgba(18, 211, 114, 0.6980392157);
+
+.c1{
+  background-color: #12d372b2;
   /*defino el órden de aparición*/
   order: 2;
   /*derecho a crecer*/
   flex-grow: 5;
+
 }
 
-.c2 {
-  background-color: rgba(55, 25, 114, 0.8156862745);
+.c2{
+  background-color: #371972d0;
   order: 3;
   flex-grow: 1;
 }
 
-.c3 {
-  background-color: rgba(184, 81, 29, 0.8156862745);
+.c3{
+  background-color: #b8511dd0;
   order: 1;
   flex-grow: 1;
 }
 
 /*barra de navegacion con Flexfox*/
+
+
 /*CSS GRID PRACTICA*/
-.cabecera {
+.cabecera{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   /*tipografia*/
-  font-family: "fuente-principal", sans-serif;
+  font-family: 'fuente-principal', sans-serif;
   font-size: 50px;
+  
   /*box-modeling*/
   padding: 20px 0;
 }
 
-.grid-container {
+.grid-container{
   /*Box-modeling*/
   width: 90%;
   max-width: 1000px;
   border: 10px solid #000;
   margin: auto;
+
   /*tipografia*/
   font-size: 50px;
   text-align: center;
+
   /*Activamos grid*/
   display: grid;
   /*definimos la cantidad de columnas y el ancho de las mismas*/
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   /*definimos la cantidad de filas y el alto de las mismas*/
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4,1fr);
   gap: 5px;
+
 }
 
-.grid-container > div {
+.grid-container > div{
   /*box-modeling*/
   display: block;
   border: 1px solid #000;
@@ -288,66 +291,77 @@ button:hover::after {
   color: #fff;
 }
 
-.titulo-discos {
+.titulo-discos{
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*Grid template Areas*/
-.contenedor-grid {
+
+.contenedor-grid{
   /*tipografia*/
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 25px;
   font-weight: bold;
+
   /*box-modeling*/
   width: 90%;
   height: 600px;
   margin: 40px auto;
   border: 5px groove #fff;
+
   /*activamos grid*/
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
   gap: 10px;
+
+
   /*grid areas*/
-  grid-template-areas: "header   header  header" "nav      main    aside" "nav      main    aside" "footer   footer  footer";
+  grid-template-areas: 
+  "header   header  header"
+  "nav      main    aside"
+  "nav      main    aside"
+  "footer   footer  footer"
+  ;
+
 }
 
-.items {
+.items{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
 }
 
-.item1 {
-  background-color: rgba(18, 211, 114, 0.6980392157);
+.item1{
+  background-color: #12d372b2;
   /* grid-column: 1/3;
   grid-row: 1/4; */
   grid-area: header;
 }
 
-.item2 {
-  background-color: rgba(62, 75, 120, 0.862745098);
+.item2{
+  background-color: #3e4b78dc;
   grid-area: nav;
 }
 
-.item3 {
-  background-color: rgba(211, 101, 22, 0.862745098);
+.item3{
+  background-color: #d36516dc;
   grid-area: main;
 }
 
-.item4 {
-  background-color: rgba(52, 84, 7, 0.862745098);
+.item4{
+  background-color: #345407dc;
   grid-area: aside;
 }
 
-.item5 {
-  background-color: rgba(172, 29, 129, 0.862745098);
+.item5{
+  background-color: #ac1d81dc;
   grid-area: footer;
 }
 
-.titulo-tickets {
-  font-family: "Roboto", sans-serif;
+.titulo-tickets{
+  font-family: 'Roboto', sans-serif;
   font-size: 25px;
   color: #212F3D;
   font-weight: 600;
@@ -355,7 +369,8 @@ button:hover::after {
 }
 
 /*navbar con flexbox*/
-.icon-fito {
+
+.icon-fito{
   width: 100px;
   border-radius: 50%;
 }
@@ -368,8 +383,8 @@ nav {
   align-items: center;
 }
 
-a {
-  font-family: "fuente-principal", sans-serif;
+a{
+  font-family: 'fuente-principal', sans-serif;
   font-weight: 600;
   text-decoration: none;
   font-size: 18px;
@@ -396,8 +411,9 @@ a:link{
 a:visited{
   color: #911973;
 } */
+
 /*:nth-child(N) & nth-last-child*/
-.grupo {
+.grupo{
   width: 500px;
   margin: 20px auto;
   background-color: #ccc;
@@ -408,57 +424,62 @@ a:visited{
   color: #212F3D;
   font-size: 20px;
 } */
+
 /*posiciones impares*/
 /* .lista :nth-last-child(even){
   background-color: #00cdf1;
   color: #212F3D;
   font-size: 20px;
 } */
-.lista :nth-child(odd) {
+
+.lista :nth-child(odd){
   background-color: #00cdf1;
   color: #212F3D;
   font-size: 20px;
 }
 
-/* posiciones pares*/
+/* posiciones pares*/ 
 /* /* .lista :nth-child(even){
   background-color: #00cdf1;
   color: #212F3D;
   font-size: 20px;
 } */
+
 /*First and last of type*/
-.elementos p:first-of-type {
+
+.elementos p:first-of-type{
   background-color: #212F3D;
   text-transform: uppercase;
   color: #084550;
 }
 
-.elementos p:last-of-type {
+.elementos p:last-of-type{
   background-color: #311102;
   text-transform: lowercase;
-  color: #fff;
+  color:#fff
 }
 
-.elementos div:first-of-type {
+.elementos div:first-of-type{
   background-color: #9f9008;
   text-transform: capitalize;
   color: #222120;
 }
 
 /*tarea para el hogar, impactar al ultimo de los divs*/
+
 /*First and last child*/
-.parrafos p:first-child {
+.parrafos p:first-child{
   background-color: #ba2a0e;
   color: white;
 }
 
-.parrafos p:last-child {
+.parrafos p:last-child{
   background-color: #495cc7;
   color: rgb(16, 16, 16);
 }
 
 /*Metodología BEM*/
-.contenedor {
+.contenedor{
   /* max-width: 500px;
   width: 90%; */
   margin: 20px 5px;
@@ -470,7 +491,7 @@ a:visited{
 }
 
 /*Bloque 1*/
-.tarjeta {
+.tarjeta{
   width: 800px;
   border-radius: 10px;
   padding: 10px;
@@ -481,9 +502,9 @@ a:visited{
   gap: 20px;
 }
 
-.tarjeta__fecha {
+.tarjeta__fecha{
   background-color: rgb(240, 16, 16);
-  color: #F4D03F;
+  color: $color-primario;
   font-weight: bolder;
   padding: 5px;
   width: 100px;
@@ -493,37 +514,37 @@ a:visited{
 }
 
 /*Elemento 1*/
-.tarjeta__imagen {
+.tarjeta__imagen{
   width: 60%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
 /*Elemento 2*/
-.tarjeta__textos {
-  font-family: "Roboto", sans-serif;
+.tarjeta__textos{
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
   color: #000;
-}
+} 
 
 /*Elemento 3*/
-.tarjeta__enlace {
+.tarjeta__enlace{
   color: #f10086;
   padding: 10px auto;
   font-size: 20px;
   text-transform: uppercase;
-  font-family: "fuente-principal";
+  font-family: 'fuente-principal';
 }
 
-.tarjeta__parrafo {
+.tarjeta__parrafo{
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 /*Bloque 2*/
-.boton {
+.boton{
   background: #000;
   display: block;
   width: 100px;
@@ -537,56 +558,76 @@ a:visited{
 }
 
 /*Modificador*/
-.boton--alternativo {
+.boton--alternativo{
   font-size: 18px;
   font-weight: lighter;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 0;
 }
 
+
+
+
+
 /*Mediaqueries*/
-@media screen and (max-width: 480px) {
-  .contenedor-grid {
+@media screen and (max-width: 480px){
+  
+  .contenedor-grid{
     /*tipografia*/
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: lighter;
+  
     /*box-modeling*/
     width: 90%;
     height: 600px;
     margin: 40px auto;
     border: 5px groove #000;
+  
     /*activamos grid*/
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(5,auto);
     gap: 10px;
+  
     /*grid areas*/
-    grid-template-areas: "header" "main" "aside" "nav" "footer";
+    grid-template-areas: 
+    "header"
+    "main"
+    "aside"
+    "nav"
+    "footer"
+    ;
+  
   }
+
 }
-@media screen and (min-width: 481px) and (max-width: 960px) {
-  .titulo-tickets {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+@media screen and (min-width: 481px) and (max-width: 960px){
+  .titulo-tickets{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 22px;
     color: #911973;
-    font-weight: lighter;
+    font-weight:lighter;
     border: 2px groove #000;
     margin-left: 20px;
     margin-top: 20px;
   }
+
   /*Modificar la disposición de nuestro grid areas para este breakpoint*/
+
 }
-@media screen and (min-width: 961px) and (max-width: 1328px) {
-  .titulo-tickets {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+@media screen and (min-width: 961px) and (max-width: 1328px){
+  .titulo-tickets{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     color: #5f3c30;
-    font-weight: bolder;
+    font-weight:bolder;
     border: 3px dotted #000;
     margin-left: 20px;
     margin-top: 20px;
   }
 }
 
-/*# sourceMappingURL=estilos.css.map */
+
