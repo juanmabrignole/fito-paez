@@ -9,8 +9,71 @@ $fuente-principal: Arial, Helvetica, sans-serif;
 $color-primario: #F4D03F;
 $color-secundario: #F39C12;
 
+/*Condicionales IF*/
+$color-home: blue;
+$ancho: 60px;
+
+
+#barra-navegacion {
+  /*if condicional*/
+  /*IF anidados*/
+  @if ($ancho < 50px){
+    background-color: green;
+    color: #000;
+    width: 100%;
+  } @else if($ancho >= 100px){
+    background-color: red;
+  }
+  @else {
+    background-color: pink;
+  }
+}
+
+/*Bucle o ciclo FOR (ciclo exacto)*/
+$i: 1;
+
+@for $i from 1 through 6{
+  .h#{$i}{//interpolación
+    font-size: $i * 2rem;
+  }
+}
+
+/*Bucle o cilo each*/
+/*inicializamos la variable o array*/
+$lista1: red, green, yellow, blue;
+
+@each $color in $lista1{
+  .#{$color}{
+    background-color: $color;
+  }
+}
+
+/*mapas*/
+$estilos: (
+  //keys
+  color: green,
+  centro: center,
+  tFuente: 35px,
+  1rem: 1rem
+);
+
+/*extend*/
+
+.card{
+  width: 100px;
+  height: 100px;
+  color: red;
+  background-color: red;
+}
+
+.userCard{
+  font-size: 30px;
+  font-weight: bold;
+  @extend .card;
+}
+
 body {
-  background-color: $color-primario;
+  background-color: map-get($map: $estilos, $key: color);
   /*operaciones matemáticas + - / * */
   padding: ($relleno + 100) * 10;
 }
@@ -42,6 +105,7 @@ body {
   font-style: italic;
   font-size: $font-size;
   font-family: $fuente-principal;
+  @extend .card;
 }
 
 /*selector de tipo clase*/
@@ -210,7 +274,7 @@ button:hover::after {
   width: 200px;
   height: 200px;
   border: 1px solid #ccc;
-  background-color: #7f4516;
+  background-color: map-get($map: $estilos, $key: color);
   margin: 5px;
 
   /*tipografia*/
@@ -253,9 +317,10 @@ button:hover::after {
   justify-content: center;
   align-items: center;
 
+
   /*tipografia*/
   font-family: 'fuente-principal', sans-serif;
-  font-size: 50px;
+  font-size: map-get($map: $estilos, $key: tFuente);
   
   /*box-modeling*/
   padding: 20px 0;

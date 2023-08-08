@@ -22,8 +22,72 @@ nav ul li a {
 }
 
 /*Variables globales*/
+/*Condicionales IF*/
+#barra-navegacion {
+  /*if condicional*/
+  /*IF anidados*/
+  background-color: pink;
+}
+
+/*Bucle o ciclo FOR (ciclo exacto)*/
+.h1 {
+  font-size: 2rem;
+}
+
+.h2 {
+  font-size: 4rem;
+}
+
+.h3 {
+  font-size: 6rem;
+}
+
+.h4 {
+  font-size: 8rem;
+}
+
+.h5 {
+  font-size: 10rem;
+}
+
+.h6 {
+  font-size: 12rem;
+}
+
+/*Bucle o cilo each*/
+/*inicializamos la variable o array*/
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+/*mapas*/
+/*extend*/
+.card, .hola, .userCard {
+  width: 100px;
+  height: 100px;
+  color: red;
+  background-color: red;
+}
+
+.userCard {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 body {
-  background-color: #F4D03F;
+  background-color: green;
   /*operaciones matemáticas + - / * */
   padding: 1200px;
 }
@@ -217,7 +281,7 @@ button:hover::after {
   width: 200px;
   height: 200px;
   border: 1px solid #ccc;
-  background-color: #7f4516;
+  background-color: green;
   margin: 5px;
   /*tipografia*/
   color: #fff;
@@ -256,7 +320,7 @@ button:hover::after {
   align-items: center;
   /*tipografia*/
   font-family: "fuente-principal", sans-serif;
-  font-size: 50px;
+  font-size: 35px;
   /*box-modeling*/
   padding: 20px 0;
 }
