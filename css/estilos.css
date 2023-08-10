@@ -56,22 +56,6 @@ nav ul li a {
 
 /*Bucle o cilo each*/
 /*inicializamos la variable o array*/
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.blue {
-  background-color: blue;
-}
-
 /*mapas*/
 /*extend*/
 .card, .hola, .userCard {
@@ -86,10 +70,20 @@ nav ul li a {
   font-weight: bold;
 }
 
-body {
-  background-color: green;
-  /*operaciones matemáticas + - / * */
-  padding: 1200px;
+/*Mixins o funciones*/
+/*mixin sin parámetros*/
+/*Creamos la función y definimos su parámetros*/
+.principal {
+  /*Llamado a la función y le enviamos los argumentos*/
+  border: 10px solid red;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.estilo-links {
+  border: 20px solid green;
+  border-radius: 20px;
+  background-color: rgba(55, 25, 114, 0.8156862745);
 }
 
 /*Tipografías*/
@@ -118,6 +112,54 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Mixins*/
+/*Animaciones-transformaciones*/
+.img-home {
+  width: 20%;
+  /*transformaciones*/
+}
+
+/*Transiciones*/
+/*Bloque 2*/
+.boton {
+  background: #000;
+  display: block;
+  width: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 100px;
+  color: #fff;
+  margin-top: 10px;
+  /*transición*/
+  transition: width 3s;
+}
+
+.boton:hover {
+  width: 110px;
+}
+
+/*Animaciones*/
+.icon-fito {
+  animation-name: logo-fito-anime;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+
+@keyframes logo-fito-anime {
+  /*ejemplo 1*/
+  /*Ejemplo 2*/
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*Modificador*/
 /*selector de tipo clase*/
 .estilo-links {
   font-size: 20px;
@@ -425,11 +467,12 @@ button:hover::after {
 }
 
 nav {
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  /*Gradientes*/
+  background-image: radial-gradient(ellipse, red, yellow);
 }
 
 a {
@@ -584,28 +627,6 @@ a:visited{
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-/*Bloque 2*/
-.boton {
-  background: #000;
-  display: block;
-  width: 100px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 100px;
-  color: #fff;
-  margin-top: 10px;
-}
-
-/*Modificador*/
-.boton--alternativo {
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: "Roboto", sans-serif;
-  border-radius: 0;
 }
 
 /*Mediaqueries*/

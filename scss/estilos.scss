@@ -40,13 +40,13 @@ $i: 1;
 
 /*Bucle o cilo each*/
 /*inicializamos la variable o array*/
-$lista1: red, green, yellow, blue;
+// $lista1: red, green, yellow, blue;
 
-@each $color in $lista1{
-  .#{$color}{
-    background-color: $color;
-  }
-}
+// @each $colores in $lista1{
+//   .#{$colores}{
+//     background-color: $colores;
+//   }
+// }
 
 /*mapas*/
 $estilos: (
@@ -72,11 +72,29 @@ $estilos: (
   @extend .card;
 }
 
-body {
-  background-color: map-get($map: $estilos, $key: color);
-  /*operaciones matemáticas + - / * */
-  padding: ($relleno + 100) * 10;
+/*Mixins o funciones*/
+/*mixin sin parámetros*/
+/*Creamos la función y definimos su parámetros*/
+@mixin crearBordes($colorBorde,$tamanio,$colorBack){
+  border: $tamanio solid $colorBorde;
+  border-radius: $tamanio;
+  background-color: $colorBack;
 }
+
+.principal{
+  /*Llamado a la función y le enviamos los argumentos*/
+  @include crearBordes(red,10px,#000);
+}
+
+.estilo-links{
+  @include crearBordes(green,20px,#371972d0);
+}
+
+// body {
+//   background-color: map-get($map: $estilos, $key: color);
+//   /*operaciones matemáticas + - / * */
+//   // padding: ($relleno + 100) * 10;
+// }
 
 
 
@@ -107,6 +125,89 @@ body {
   font-family: $fuente-principal;
   @extend .card;
 }
+
+/*Mixins*/
+
+/*Animaciones-transformaciones*/
+.img-home {
+  width: 20%;
+  /*transformaciones*/
+  // transform: translateX(300px);
+  // transform: translateY(-200px);
+  // transform: rotate(-90deg);
+  // transform: scale(1,4);
+  // transform: skewY(20deg);
+}
+
+/*Transiciones*/
+/*Bloque 2*/
+.boton{
+  background: #000;
+  display: block;
+  width: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 100px;
+  color: #fff;
+  margin-top: 10px;
+
+  /*transición*/
+  transition: width 3s;
+}
+
+.boton:hover{
+  width: 110px;
+}
+
+/*Animaciones*/
+.icon-fito{
+  animation-name: logo-fito-anime;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+
+@keyframes logo-fito-anime {
+  /*ejemplo 1*/
+  // 0%{
+  //   width: 100px;
+  // }
+  // 25%{
+  //   width: 50px;
+  // }
+  // 50%{
+  //   width: 200px;
+  // }
+  // 75%{
+  //   width: 300px;
+  // }
+  // 100%{
+  //   width: 100px;
+  // }
+
+  /*Ejemplo 2*/
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+
+
+}
+
+/*Modificador*/
+// .boton--alternativo{
+//   font-size: 18px;
+//   font-weight: lighter;
+//   font-family: 'Roboto', sans-serif;
+//   border-radius: 0;
+// }
+
 
 /*selector de tipo clase*/
 .estilo-links{
@@ -441,11 +542,13 @@ button:hover::after {
 }
 
 nav {
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  /*Gradientes*/
+  // 
+  background-image: radial-gradient(ellipse, red, yellow);
 }
 
 a{
@@ -607,32 +710,6 @@ a:visited{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-/*Bloque 2*/
-.boton{
-  background: #000;
-  display: block;
-  width: 100px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 100px;
-  color: #fff;
-  margin-top: 10px;
-}
-
-/*Modificador*/
-.boton--alternativo{
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Roboto', sans-serif;
-  border-radius: 0;
-}
-
-
-
-
 
 /*Mediaqueries*/
 @media screen and (max-width: 480px){
